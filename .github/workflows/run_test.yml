@@ -31,43 +31,4 @@ jobs:
         run: |  
           coverage report -m
 
-3. The code block above performs the following actions when a new commit is pushed to Github:
-
-    Sets up a mini Ubuntu environment with a Python 3.10 runner
-    Installs dependencies via requirements.txt
-    Runs the unit test using Pytest and generates a coverage report
-    Prints the coverage report to the console
-
-4. Now it’s time to publish these changes and see Github in action! (no pun intended). Navigate to the tests/simple_calculator branch. Verify the changes being made, then commit and push!
-
-5. Navigate to your Github repository and click on the Actions tab. Here, you should be able to see some information populate from your most recent commit, including how much time the action took, if it was successful, and info about the commit the action came from. Click on the workflow run to see more details.
-
-    Note: I had made a mistake on the first run, which is why it failed. It succeeded the second time!
-
-6. The summary screen shows information about what tests were run, as well as an “Annotation” section that shows warnings about potential formatting violations from the linter “ruff”. Click on the build folder to see more information.
-
-7. Here, you can see all of the actions that were run based on what we instructed Github to do in our .yml file. Click the drop down menu on each action to see more details. Most importantly are the Test with pytest menu, and the Coverage Report menu.
-
-    Pytest will show you the details about the tests you wrote and tested on your local machine. If any fail, the action will throw an error (and show a big red X)
-    The Coverage Report shows how much of the codebase was tested. If there are any files with less than 100%, the report will show which parts of the code were not tested (typically main() function logic from other parts of the code will not be tested)
-
-8. Once you are satisfied with the test results, create a pull request and merge tests/simple_calculator into main. 
-
-Congratulations, you have now created an automated system to help you check and validate your code!
-
-For Practice: Complete lab_c.py and lab_d.py by resolving the critical issue, creating unit tests, and automating the tests via Github Actions. Be sure to:
-
-    Create a new branch for your work, either prefixed by  “fix/”, “feature/” or “tests/”
-    After resolving the issue, create a pull request and practice merging into main
-    Do not make a Pull Request into the MIT BWSI CSS organization!
-    Modify the Github Actions .yml file to include tests for your new files
-    Investigate the Actions report and analyze results from the coverage report to ensure that your codebase is sufficiently tested.
-
-Question 1.2.5.a 0.0/1.0 point (graded)
-Which of the following events would be considered critical and devalidate a code push when reviewing the Github Action report?
-The coverage report states that only 80% of the code was reviewed
-The linter returns 14 annotations regarding characters exceeding line space
-Pytest reports that 9/10 tests have passed in 4.1 seconds
-No post-run actions or checkouts are reported
-You have used 0 of 1 attempt Some problems have options such as save, reset, hints, or show answer. These options follow the Submit button.
-
+          
